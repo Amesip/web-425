@@ -1,0 +1,62 @@
+<mat-toolbar class="menu" role="header" color="primary">
+  <mat-toolbar-row>
+    <button mat-button class="toolbar__icon-button mat-button">
+      <span style="margin-left: 5px !important;">WEB 425</span>
+    </button>
+    <button mat-button class="mat-button">
+      About
+    </button>
+    <button mat-button class="mat-button">
+      Contact Us
+    </button>
+
+    <div fxFlex></div>
+
+    <!--User Profile -->
+    <button class="toolbar__icon-button" [matMenuTriggerFor]="menu" mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>perm_contact_calendar</mat-icon>
+        <span>My Profile</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+  </mat-toolbar>
+  
+<div class="wrapper">
+    <div class="parent" fxLayout="row">
+        <div class="left" fxFlex="20"></div>
+        <div class="right" fxFlex="80">
+          <h1 class="message">Welcome to the Login Screen!</h1>
+	<div class="frm-login">
+		<mat-card class="login-panel frm-login-panel">
+			<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+
+        <div>Username: <input type="text" name="username" ngModel></div>
+      
+        <div>SSN: <input type="text" name="ssn" ngModel></div>
+      
+        <div ngModelGroup="passwordsGroup">
+          <div>Password: <input type="password" name="password" ngModel></div>
+          <div>Confirm password: <input type="password" name="pconfirm" ngModel></div>
+        </div>
+      
+        <button type="submit">Submit</button>
+      
+      </form>
+		</mat-card>
+	</div>
+</div>
+</div>
+</div>
+

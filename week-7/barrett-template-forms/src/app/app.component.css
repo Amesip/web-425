@@ -1,0 +1,18 @@
+/* Form Styles */
+.unicorn { width: 50%; margin: 0 auto; }
+.stuff { border: 1px solid black; }
+.password { background-color: purple; }
+/* Global */
+/* Form Styles */
+.frm-login { width: 50%; margin: 0 auto; padding: 50px}
+.frm-login-panel { border: 1px solid black; }
+.frm-login-header { background-color: rgb(71, 8, 173); }
+.frm-login-toolbar { background-color: rgb(71, 8, 173); color: white; }
+.frm-login-body { display: flex; flex-direction: column; margin-top: 15px; }
+.btn-login { background-color: gray; color: black; }
+.frm-login-actions { text-align: right; }
+/* Global */
+.wrapper { width: 100%; }
+.parent { height: 1000px; }
+.left { background-color:  rgb(71, 8, 173); height: 100% }
+.right { background-color:  gray; height: 100% }
