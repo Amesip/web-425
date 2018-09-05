@@ -1,58 +1,29 @@
-import {Component, Inject} from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { Component } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { UnicornComponent } from './unicorn/unicorn.component';
 
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-}
-export class CheckboxConfigurable {
-  checked = false;
-  indeterminate = false;
-  labelPosition = 'after';
-  disabled = false;
-}
-export class DialogOverviewExample {
 
-  animal: string;
-  name: string;
+  constructor(private dialog: MatDialog) { }
 
-  constructor(public dialog: MatDialog) {}
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '250px',
-      data: {name: this.name, animal: this.animal}
-    });
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
-    });
+    dialogConfig.data = {
+      id: 1,
+      title: 'Bobs Computer Repair'
+    };
+
+    this.dialog.open(UnicornComponent, dialogConfig);
   }
-
 }
-@Component({
-  selector: 'unicorn',
-  templateUrl: 'unicorn.html',
-})
-export class DialogOverviewExampleDialog {
-
-  constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
-}
-

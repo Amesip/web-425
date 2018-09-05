@@ -72,24 +72,11 @@
         </mat-card-content>
 
         <mat-card-actions class="frm-login-actions">
-            <button mat-raised-button class="btn-login">Calculate</button>
+            <button mat-raised-button class="btn-login" (click)="openDialog()">Calculate</button>
         </mat-card-actions>
     </mat-card>
     <br/><br/>
     <hr />
 </div>
 
-<ol>
-    <li>
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="What's your name?">
-      </mat-form-field>
-    </li>
-    <li>
-      <button mat-raised-button (click)="openDialog()">Pick one</button>
-    </li>
-    <li *ngIf="animal">
-      You chose: <i>{{animal}}</i>
-    </li>
-  </ol>
   

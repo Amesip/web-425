@@ -15,11 +15,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material';
+import { UnicornComponent } from './unicorn/unicorn.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    UnicornComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { MatDialogModule } from '@angular/material';
     MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [UnicornComponent]
 })
 export class AppModule { }
