@@ -1,16 +1,25 @@
-<h2 mat-dialog-title>{{data.description}}</h2>
 
-<mat-dialog-content [formGroup]="form">
-  
-    <mat-form-field>
-        <input matInput
-                placeholder="Course Description"
-               formControlName="description">
-    </mat-form-field>
- 
-</mat-dialog-content>
+<h1 mat-dialog-title class="title" style="text-align: center">{{description}}</h1>
 
-<mat-dialog-actions>
-    <button class="mat-raised-button"(click)="close()">Close</button>
-    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
-</mat-dialog-actions>
+
+<mat-card-content class="frm-login-body">
+    <mat-card-content>
+        <ul class="mdc-list" aria-orientation="vertical">
+            <li class="mdc-list-item">Password Reset {{passwordreset}}</li>
+            <li class="mdc-list-item">Spyware Removal {{spywareremoval}}</li>
+            <li class="mdc-list-item">RAM Upgrade {{ramupgrade}}</li>
+            <li class="mdc-list-item">Software Installation {{softwareinstallation}}</li>
+            <li class="mdc-list-item">Tune-Up {{tuneup}}</li>
+            <li class="mdc-list-item">Keyboard Cleaning {{keyboardcleaning}}</li>
+            <li class="mdc-list-item">Disk Clean-Up {{diskcleanup}}</li>
+        </ul>
+
+    </mat-card-content>
+
+</mat-card-content>
+<div class="wrapper" style="margin:auto; width:600px;display:block">
+    <img mat-card-image src="../assets/any-brand-any-problem.png" style="margin:auto; width:400px;display:block" />
+
+    <mat-dialog-actions>
+        <button class="mat-raised-button" (click)="close()">Close</button>
+    </mat-dialog-actions>

@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material';
 import { UnicornComponent } from './unicorn/unicorn.component';
-
+import { MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,8 @@ import { UnicornComponent } from './unicorn/unicorn.component';
     MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],
